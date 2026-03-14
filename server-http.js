@@ -129,6 +129,15 @@ function createServer() {
 
 const app = createMcpExpressApp({ host: "0.0.0.0" });
 
+// Claude and some clients don't send the strict Accept header. Add it so MCP SDK accepts the request.
+app.use("/mcp", (req, res, next) => {
+  const accept = req.headers["accept"] || "";
+  if (!accept.includes("application/json") || !accept.includes("text/event-stream")) {
+    req.headers["accept"] = "application/json, text/event-stream";
+  }
+  next();
+});
+
 app.post("/mcp", async (req, res) => {
   const server = createServer();
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
