@@ -2,4 +2,20 @@ node_modules/
 credentials.json
 token.json
 .env
+.env.*
 *.log
+.DS_Store
+
+# Google OAuth
+credentials*.json
+token*.json
+
+# LinkedIn MCP (if added later)
+linkedin-credentials.json
+
+# Secrets and keys
+*.pem
+*.key
+secrets/
+.env.local
+.env.production
