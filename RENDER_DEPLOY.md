@@ -21,18 +21,15 @@ git push -u origin main
 
 ## Step 2: Prepare credentials for env vars
 
-Run locally and copy the output (minified JSON, one line each):
+Run this and copy each block into Render:
 
 ```bash
 cd /Users/afridshaik/google-docs-mcp
-cat credentials.json | tr -d '\n' | tr -s ' '
-# Copy the output
-
-cat token.json | tr -d '\n' | tr -s ' '
-# Copy the output
+node prepare-render.js
 ```
 
-Keep both strings ready to paste in Render.
+Copy the first block → `GOOGLE_CREDENTIALS_JSON`  
+Copy the second block → `GOOGLE_TOKEN_JSON`
 
 ---
 
