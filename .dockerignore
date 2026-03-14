@@ -1,0 +1,9 @@
+node_modules
+.git
+.env
+*.log
+.DS_Store
+
+# Keep credentials out of image - mount via volume
+credentials.json
+token.json

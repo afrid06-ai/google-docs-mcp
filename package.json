@@ -1,0 +1,25 @@
+{
+  "name": "google-docs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Google Docs (stdio transport for Cursor)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "start:http": "node server-http.js",
+    "auth": "node auth.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "google-docs",
+    "cursor"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "googleapis": "^171.4.0",
+    "zod": "^3.25.76"
+  }
+}

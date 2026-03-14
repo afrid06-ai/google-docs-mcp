@@ -1,0 +1,12 @@
+services:
+  google-docs-mcp:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount credentials so the container can auth to Google
+      - ./credentials.json:/app/credentials.json:ro
+      - ./token.json:/app/token.json:ro
+    environment:
+      - PORT=3000
+    restart: unless-stopped

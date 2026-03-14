@@ -1,0 +1,13 @@
+# Render Blueprint - optional, speeds up setup
+# Deploy via dashboard: New → Web Service, connect repo
+# Add GOOGLE_CREDENTIALS_JSON and GOOGLE_TOKEN_JSON as Secret env vars
+
+services:
+  - type: web
+    name: google-docs-mcp
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server-http.js
+    envVars:
+      - key: NODE_VERSION
+        value: "20"

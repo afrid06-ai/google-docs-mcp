@@ -1,0 +1,17 @@
+{
+  "name": "linkedin-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for LinkedIn - Claude can post to highlight your profile",
+  "type": "module",
+  "main": "server-http.js",
+  "scripts": {
+    "start": "node server-http.js",
+    "auth": "node auth.js",
+    "schedule": "node scheduler.js",
+    "test": "node test-mcp.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.76"
+  }
+}
